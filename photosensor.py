@@ -6,7 +6,6 @@
  
 import argparse
 import time
-import os
 
 import RPi.GPIO as GPIO
  
@@ -28,7 +27,7 @@ def RCtime (RCpin):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='photosensor, larger numbers are darker')
     parser.add_argument("--pin", type=int, default=18)
-    parser.add_argument("--outfile", "-o", type=str, default="photosensor.value")
+    parser.add_argument("--outfile", "-o", type=str, default="/tmp/photosensor.value")
     parser.add_argument("--debug", action="store_true")
     options = parser.parse_args()
 
