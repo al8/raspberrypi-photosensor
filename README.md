@@ -15,6 +15,6 @@ prereqs:
   
 setup:
   RUN these to get photosensor to run on startup:
-  cp initd_photosensor.sh /etc/init.d/
+  sudo cp initd_photosensor.sh /etc/init.d/
   sudo update-rc.d initd_photosensor.sh defaults
   sudo /etc/init.d/initd_photosensor.sh start
