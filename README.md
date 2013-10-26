@@ -3,6 +3,7 @@ raspberrypi-photosensor
 
 from:
   http://learn.adafruit.com/basic-resistor-sensor-reading-on-raspberry-pi/basic-photocell-reading
+use 100uF capacitor or larger for best results
 
 prereqs:
   need GPIO

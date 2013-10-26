@@ -29,6 +29,7 @@ def RCtime (RCpin):
     # This takes about 1 millisecond per loop cycle
     while (GPIO.input(RCpin) == GPIO.LOW):
         reading += 1
+        time.sleep(0.1)
     return reading
 
 @atexit.register
@@ -55,3 +56,4 @@ if __name__ == "__main__":
             print(reading)
         with open(options.outfile, "wb") as f:
             f.write("%d" % reading)
+        time.sleep(0.5)
